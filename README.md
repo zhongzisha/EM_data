@@ -62,7 +62,6 @@ To access each image in a block-wise manner, we first convert the datasets into 
 ```
 python task3_step1_convert_to_zarr.py
 ```
-Please note that we do not include the meta information of each dataset into the Zarr dataset. We can add the necessary and documented meta information using [attributes](https://zarr.readthedocs.io/en/stable/user-guide/attributes.html) provided in Zarr. Each dataset has different meta information. It is advisable to first propose a template for meta information and then consolidate these available information into the Zarr dataset.
 
 The generated Zarr dataset are saved in the `data` directory, like this:
 ```
