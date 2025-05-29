@@ -5,9 +5,9 @@
 
 current_dir=`pwd`
 
-dest_dir="data/data-em"
-mkdir -p $dest_dir
-cd $dest_dir
+DST_SAVE_DIR="$(pwd)/data/data-em"
+mkdir -p $DST_SAVE_DIR
+cd $DST_SAVE_DIR
 
 wget https://documents.epfl.ch/groups/c/cv/cvlab-unit/www/data/%20ElectronMicroscopy_Hippocampus/volumedata.tif
 

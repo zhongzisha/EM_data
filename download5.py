@@ -8,6 +8,7 @@ os.environ['GCE_METADATA_ROOT'] = 'metadata.google.internal.invalid'
 import tensorstore as ts
 import numpy as np
 import matplotlib.pyplot as plt
+import zarr
 
 context = ts.Context({'cache_pool': {'total_bytes_limit': 1000000008}})
 
@@ -36,6 +37,13 @@ print(img_cutout_8nm.dtype)  # uint8
 print(img_cutout_8nm.shape)  # 128x128x128
 print(img_cutout_8nm.min())  # 0
 print(img_cutout_8nm.max())  # 255
+
+# save to zarr dataset
+zarr_filename = 'data/hemibrain-ng_1000x1000x1000.zarr'
+if not os.path.exists(zarr_filename):
+    zarr_array = zarr.open(zarr_filename, mode='w', shape=img_cutout_8nm.shape, dtype=img_cutout_8nm.dtype)
+    zarr_array[:] = img_cutout_8nm
+
 
 
 ## crop a 128x128x128 region from randomly position (x,y,z)
