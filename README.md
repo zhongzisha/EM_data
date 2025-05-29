@@ -35,6 +35,19 @@ data
 ```
 
 # Task 2
+First, I collected the metadata from the webpage of each dataset and listed it in a Google Sheet ([link](https://docs.google.com/spreadsheets/d/1sRJtdbJOCdzBCWieZm3p8rwkODft3VM6iDRl2EIZRKo/edit?usp=drive_link)). After that, I identified the common metadata fields across the datasets and determined which ones were most important. Finally, I summarized this key information in a single table, as follows (also in [CSV](./consolidated_meta.csv) format).
+
+For `dataset5`, the FlyEM hemibrain data, the pixel resolution reported in the original publication is 4 nm. However, the version available via the neuroglancer_precomputed format on Google Cloud has a pixel resolution of 8 nm.
+This discrepancy suggests that the publicly accessible dataset may be a resampled version of the original high-resolution data.
+If the original 4 nm data is required for your analysis or project, it is advisable to contact the data owner or the FlyEM team for confirmation and access.
+
+| name     | url                                                                        |   depth |   height |   width | pixel_type   | pixel_size_in_nm   | experiment_type   | species      | organ             | publication_url                                             |
+|:---------|:---------------------------------------------------------------------------|--------:|---------:|--------:|:-------------|:-------------------|:------------------|:-------------|:------------------|:------------------------------------------------------------|
+| dataset1 | https://idr.openmicroscopy.org/webclient/img_detail/9846137/?dataset=10740 |     184 |      775 |    1121 | uint8        | [50, 50, 50]       | FIB-SEM           | Homo sapiens | chromatin         | https://www.science.org/doi/10.1126/sciadv.aba8811          |
+| dataset2 | https://www.ebi.ac.uk/empiar/EMPIAR-11759/                                 |      16 |     5500 |    5496 | uint8        | [80, 80, 80]       | SBF-SEM           | zebrafish    | eye               | https://doi.org/10.6019/EMPIAR-11759                        |
+| dataset3 | https://www.epfl.ch/labs/cvlab/data/data-em/                               |    1065 |     1536 |    2048 | uint8        | [5, 5, 5]          | EM                | unknown      | mitochondria      | https://ieeexplore.ieee.org/document/6619103                |
+| dataset4 | https://openorganelle.janelia.org/datasets/jrc_mus-nacc-2                  |     564 |     2520 |    2596 | int16        | [2.96, 4, 4]       | FIB-SEM           | Mouse        | nucleus accumbens | https://www.nature.com/articles/s41586-021-03992-4          |
+| dataset5 | https://www.janelia.org/project-team/flyem/hemibrain                       |    1000 |     1000 |    1000 | uint8        | [8, 8, 8]          | FIB-SEM           | fly          | brain             | https://www.biorxiv.org/content/10.1101/2024.04.21.590464v1 |
 
 # Task 3
 
