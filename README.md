@@ -37,6 +37,9 @@ data
 # Task 2
 First, I collected the metadata from the webpage of each dataset and listed it in a Google Sheet ([link](https://docs.google.com/spreadsheets/d/1sRJtdbJOCdzBCWieZm3p8rwkODft3VM6iDRl2EIZRKo/edit?usp=drive_link)). After that, I identified the common metadata fields across the datasets and determined which ones were most important. Finally, I summarized this key information in a single table, as follows (also in [CSV](./consolidated_meta.csv) format).
 
+For `dataset2`, there is a discrepancy between the image dimensions reported on the dataset webpage and the actual dimensions found in the image data.
+The true width and height of the image data have been verified and are correctly listed in the table provided. 
+
 For `dataset5`, the FlyEM hemibrain data, the pixel resolution reported in the original publication is 4 nm. However, the version available via the neuroglancer_precomputed format on Google Cloud has a pixel resolution of 8 nm.
 This discrepancy suggests that the publicly accessible dataset may be a resampled version of the original high-resolution data.
 If the original 4 nm data is required for your analysis or project, it is advisable to contact the data owner or the FlyEM team for confirmation and access.
