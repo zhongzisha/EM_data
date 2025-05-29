@@ -62,6 +62,8 @@ To access each image in a block-wise manner, we first convert the datasets into 
 ```
 python task3_step1_convert_to_zarr.py
 ```
+Please note that we do not include the meta information of each dataset into the Zarr dataset. We can add the necessary and documented meta information using [attributes](https://zarr.readthedocs.io/en/stable/user-guide/attributes.html) provided in Zarr. Each dataset has different meta information. It is advisable to first propose a template for meta information and then consolidate these available information into the Zarr dataset.
+
 The generated Zarr dataset are saved in the `data` directory, like this:
 ```
 data
@@ -74,6 +76,17 @@ data
 ├── hemibrain-ng_1000x1000x1000.zarr
 └── jrc_mus-nacc-2
 ```
+
+**Notes**: Please note that metadata for each dataset is currently not included within the corresponding Zarr dataset.
+Zarr provides a flexible mechanism to store metadata using [attributes](https://zarr.readthedocs.io/en/stable/user-guide/attributes.html), which can be attached to arrays or groups. To ensure consistency and usability across datasets, the following approach is recommended:
+
+- Propose a standardized metadata template that outlines the required and optional metadata fields.
+
+- Consolidate the existing metadata for each dataset based on this template.
+
+- Add the structured metadata into the Zarr datasets using the attribute mechanism.
+
+This will improve interoperability, reproducibility, and downstream usability of the data.
 
 **Step 2**: Train a 3-D CNN on the Zarr datasets.
 ```
