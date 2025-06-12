@@ -71,7 +71,7 @@ class Zarr3DDataset(Dataset):
         if self.normalize:
             patch_tensor = self.normalize_patch(patch_tensor)
         
-        return patch_tensor, np.random.randint(low=0, high=1)
+        return patch_tensor, np.random.randint(low=0, high=2)
 
     def normalize_patch(self, patch):
         patch_min = patch.min()
