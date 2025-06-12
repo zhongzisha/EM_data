@@ -1,5 +1,5 @@
 name,url,depth,height,width,pixel_type,pixel_size_in_nm,experiment_type,species,organ,publication_url
-dataset1,https://idr.openmicroscopy.org/webclient/img_detail/9846137/?dataset=10740,184,775,1121,uint8,"[50, 50, 50]",FIB-SEM,Homo sapiens,chromatin,https://www.science.org/doi/10.1126/sciadv.aba8811
+dataset1,https://idr.openmicroscopy.org/webclient/img_detail/9846137/?dataset=10740,184,775,1121,uint8,"[20, 20, 20]",FIB-SEM,Homo sapiens,chromatin,https://www.science.org/doi/10.1126/sciadv.aba8811
 dataset2,https://www.ebi.ac.uk/empiar/EMPIAR-11759/,16,5500,5496,uint8,"[80, 80, 80]",SBF-SEM,zebrafish,eye,https://doi.org/10.6019/EMPIAR-11759
 dataset3,https://www.epfl.ch/labs/cvlab/data/data-em/,1065,1536,2048,uint8,"[5, 5, 5]",EM,unknown,mitochondria,https://ieeexplore.ieee.org/document/6619103
 dataset4,https://openorganelle.janelia.org/datasets/jrc_mus-nacc-2,564,2520,2596,int16,"[2.96, 4, 4]",FIB-SEM,Mouse,nucleus accumbens,https://www.nature.com/articles/s41586-021-03992-4
